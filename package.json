@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-plugin-resolver": "^1.1.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "es6-promise": "^4.1.0",
+    "express": "^4.15.3",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.15.1",
+    "mysql2": "^1.3.5",
+    "sequelize": "^4.1.0",
+    "sync-request": "^4.1.0",
+    "tedious": "^2.0.0",
+    "watchify": "^3.7.0",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node -r babel-register index.js",
+    "watch:js": "watchify app/app.jsx -m -d -v -o public/assets/js/bundle.js",
+    "build": "browserify app/app.jsx -o public/assets/js/bundle.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  }
+}

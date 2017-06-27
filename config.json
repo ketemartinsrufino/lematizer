@@ -1,0 +1,17 @@
+{
+  "development": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "dialect": "mysql",
+    "database": "tokenizacao",
+    "define": {
+      "freezeTableName": true
+    },
+    "pool": {
+      "max": 10,
+      "min": 2,
+      "idle": 10
+    }
+  }
+}
